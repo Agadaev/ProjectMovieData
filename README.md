@@ -24,4 +24,5 @@ Movie Data: The primary dataset used for this analysis is the "Movie Data Homewo
 - Seaseonaly..?
 
 ## Results and Findings
-For Example: Best movie for 2013-2016 with the most profitable Box revenue of 102,000,00USD in Horror genere was: !
+For Example, the Best movie for 2013-2016 with the most profitable Box revenue of 102,000,00 USD in the Horror genre was:
+![BestMovie](https://github.com/user-attachments/assets/7afe3433-9b9b-4287-b781-76c33c962655)
