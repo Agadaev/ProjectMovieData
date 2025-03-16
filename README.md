@@ -3,7 +3,11 @@
 - [Project Overview](#project-overview)
 
 ### Project Overview
-This data analysis project aims to provide insights into the performance and trends of movies from 2012 to 2016 to Apple TV's team of creative directors. By analyzing various aspects of the movie data, we seek to identify patterns, make data-driven recommendations, and gain a deeper understanding of the industry's dynamics.
+This data analysis project is designed to provide insights into the performance and trends of movies from 2012 to 2016 for Apple TV's creative directors. By exploring the dataset, we aim to:
+- Uncover patterns in movie performance, including box office revenue and production budgets.
+- Evaluate trends across various genres, actors, and directors.
+- Deliver data-driven recommendations for future content strategies.
+- Enhance understanding of the movie industry's dynamics during the analyzed period.
 
 ## Data Sources
 Movie Data: The primary dataset used for this analysis is the "Movie Data Homework.xsls" file, which contains detailed information about each movie's performance (box office and budget), actors, directors, etc. Movies Data Homework.xlsx
