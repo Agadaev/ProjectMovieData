@@ -68,7 +68,7 @@ The dashboard highlights the best-performing movies and the leading actors who h
 
 ## Challenges in Analysis
 ### M Language
-Advanced transformations in Power Query using M Language were sometimes complex. Debugging and optimizing these scripts was essential to ensure the reliability and efficiency of the data transformation process.
+- Advanced transformations in Power Query using M Language were sometimes complex. Debugging and optimizing these scripts was essential to ensure the reliability and efficiency of the data transformation process.
 ```
 let
     // Load your movie data table 
@@ -95,5 +95,37 @@ let
     )
 in
     ChangedType
-
 ```
+
+- A scenario where your movie dataset includes inconsistent date formats or missing revenue entries. In Power Query, you can write an M Language script to:
+
+    Normalize Date Formats:
+    Convert dates stored as text into a standardized date format.
+
+    Filter Out Invalid Rows:
+    Use conditions to remove rows where critical data, such as “Box Office Revenue ($)” or “Production Budget ($)”, is missing.
+
+    For example, the following M code snippet ensures that each movie's data is correctly typed and ready for analysis:
+```
+let
+    Source = Movie_Data_Table,
+    ChangedType = Table.TransformColumnTypes(
+        Source,
+        {
+            {"Movie Title", type text},
+            {"Combined Genre", type text},
+            {"Release Date", type date},
+            {"Budget ($)", Int64.Type},
+            {"Box Office Revenue ($)", type number}
+        }
+    )
+in
+    ChangedType
+```
+  This script not only enforces consistent data types but also enables further operations like filtering and aggregation later in Excel.
+
+### Handling Missing Data:
+Strategic decisions were required on which fields to impute vs. exclude, balancing data quality with completeness.
+
+### Temporal Analysis:
+Creating season-based insights involved deriving new columns from date values and aligning them with fiscal quarters or release windows — a challenge in Excel that was resolved with nested IF logic and helper columns.
